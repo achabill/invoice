@@ -8,9 +8,9 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 public interface InvoiceService {
-    Invoice findById(Long id);
+    Invoice findById(String id);
     Invoice save(Invoice invoice);
     List<Invoice> findByUser(User user);
     List<Invoice> findByCustomer(Customer customer);
-    void updateIsPaid(Long id, boolean isPaid) throws Exception;
+    void updateIsPaid(String id, boolean isPaid) throws Exception;
 }

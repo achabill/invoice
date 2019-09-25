@@ -21,7 +21,7 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Customer findById(Long id) {
+    public Customer findById(String id) {
         Optional<Customer> optionalCustomer = repository.findById(id);
         return optionalCustomer.isPresent() ? optionalCustomer.get() : null;
     }
@@ -32,7 +32,7 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public Customer update(Long id, Customer customer) throws Exception {
+    public Customer update(String id, Customer customer) throws Exception {
         Optional<Customer> optionalCustomer = this.repository.findById(id);
         if(!optionalCustomer.isPresent()){
             throw new Exception("customer not found");

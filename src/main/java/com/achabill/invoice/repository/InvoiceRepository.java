@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface InvoiceRepository extends MongoRepository<Invoice, Long> {
+public interface InvoiceRepository extends MongoRepository<Invoice, String> {
     List<Invoice> findByCustomer(Customer customer);
     List<Invoice> findByUser(User user);
 }

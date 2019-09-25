@@ -28,7 +28,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User update(Long id, User user) throws NotImplementedException {
+    public User update(String id, User user) throws NotImplementedException {
         throw new NotImplementedException();
     }
 }

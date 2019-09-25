@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 public interface CustomerService {
-    Customer findById(Long id);
+    Customer findById(String id);
     Customer save(Customer customer);
-    Customer update(Long id, Customer customer) throws Exception;
+    Customer update(String id, Customer customer) throws Exception;
     List<Customer> findByUser(User user);
 }

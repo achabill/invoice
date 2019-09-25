@@ -22,7 +22,7 @@ public class InvoiceServiceImpl implements InvoiceService {
     }
 
     @Override
-    public Invoice findById(Long id) {
+    public Invoice findById(String id) {
         Optional<Invoice> optionalInvoice = repository.findById(id);
         return optionalInvoice.isPresent() ? optionalInvoice.get() : null;
     }
@@ -43,7 +43,7 @@ public class InvoiceServiceImpl implements InvoiceService {
     }
 
     @Override
-    public void updateIsPaid(Long id, boolean isPaid) throws Exception {
+    public void updateIsPaid(String id, boolean isPaid) throws Exception {
         Optional<Invoice> optionalInvoice = repository.findById(id);
         if(!optionalInvoice.isPresent()){
             throw new Exception("Invoice not found");
