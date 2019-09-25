@@ -1,26 +1,24 @@
 package com.achabill.invoice.model;
 
-import com.mongodb.lang.Nullable;
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.data.mongodb.core.index.Indexed;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
-public class User extends AbstractDocument{
+public class User extends AbstractDocument {
     @NotNull
-    String name;
+    private String name;
     @NotNull
     @Indexed(unique = true)
-    String username;
+    private String username;
     @NotNull
-    String email;
+    private String email;
     @Min(value = 4)
-    String password;
+    private String password;
     @NotNull
-    Address address;
+    private Address address;
     @NotNull
-    String phone;
+    private String phone;
 
     public User(String name, String email, String password, Address address, String phone, String username) {
         this.name = name;

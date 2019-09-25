@@ -17,7 +17,7 @@ public class InvoiceServiceImpl implements InvoiceService {
     private final InvoiceRepository repository;
 
     @Autowired
-    public InvoiceServiceImpl(InvoiceRepository repository){
+    public InvoiceServiceImpl(InvoiceRepository repository) {
         this.repository = repository;
     }
 
@@ -45,7 +45,7 @@ public class InvoiceServiceImpl implements InvoiceService {
     @Override
     public void updateIsPaid(String id, boolean isPaid) throws Exception {
         Optional<Invoice> optionalInvoice = repository.findById(id);
-        if(!optionalInvoice.isPresent()){
+        if (!optionalInvoice.isPresent()) {
             throw new Exception("Invoice not found");
         }
     }

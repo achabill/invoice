@@ -16,7 +16,7 @@ public class CustomerServiceImpl implements CustomerService {
     private final CustomerRepository repository;
 
     @Autowired
-    public CustomerServiceImpl(CustomerRepository customerRepository){
+    public CustomerServiceImpl(CustomerRepository customerRepository) {
         this.repository = customerRepository;
     }
 
@@ -28,13 +28,13 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public Customer save(Customer customer) {
-       return this.repository.save(customer);
+        return this.repository.save(customer);
     }
 
     @Override
     public Customer update(String id, Customer customer) throws Exception {
         Optional<Customer> optionalCustomer = this.repository.findById(id);
-        if(!optionalCustomer.isPresent()){
+        if (!optionalCustomer.isPresent()) {
             throw new Exception("customer not found");
         }
         Customer oldCustomer = optionalCustomer.get();

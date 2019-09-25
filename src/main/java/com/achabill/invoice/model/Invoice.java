@@ -2,7 +2,6 @@ package com.achabill.invoice.model;
 
 import org.springframework.data.mongodb.core.mapping.DBRef;
 
-
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 import java.util.HashSet;
@@ -24,7 +23,8 @@ public class Invoice extends AbstractDocument {
     private boolean isPaid;
     private Set<LineItem> lineItems = new HashSet<>();
 
-    public Invoice(){}
+    public Invoice() {
+    }
 
     public Invoice(Customer customer, User user, Date date, Date due, double total, Tax tax, Discount discount, String currency, boolean isPaid, Set<LineItem> lineItems) {
         this.customer = customer;
