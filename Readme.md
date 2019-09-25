@@ -12,15 +12,12 @@ A simple API for invoice generation and tracking
 3. Track paid/unpaid invoices
 4. View charts and graphs
 
-## API
+## Running the app
+1. `mvn clean install`
+2. `mvn spring-boot:run`
 
-``` 
-User
-    - (POST) /login: {username, password}`
-    - response: {jwt}
-    
-    - (POST) /signup: {user}
-    - response: {user, jwt}
-```
+## Documentation
+1. Run the app
+2. Visist `locahost:8080/swagger-ui.html`
     
 
